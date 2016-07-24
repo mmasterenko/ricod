@@ -1,3 +1,4 @@
+.env
 project/settings/dev.py
 project/settings/local*.py
 project/settings/secure.py
