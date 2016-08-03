@@ -1,3 +1,10 @@
 section[role=content] {
     margin-top: 40px;
 }
+
+.good-pic {
+	float: left;
+	margin-right: 20px;
+	background-color: lightgray;
+}
+

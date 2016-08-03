@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Catalog
 
 
 def home(request):
@@ -6,5 +7,8 @@ def home(request):
 
 
 def catalog(request):
-    return render(request, 'ricod/catalog.html')
+    context = {
+        'categories': Catalog.objects.all()
+    }
+    return render(request, 'ricod/catalog.html', {'context': context})
 
