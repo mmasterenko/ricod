@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.contrib import admin
-from .models import Goods, Attributes, Catalog, Photos
+from .models import Goods, Attributes, Catalog, Photos, GeneralInfo
 
 
 admin.site.site_header = u'Интерфейс администратора'
@@ -22,19 +22,19 @@ class PhotosInline(admin.TabularInline):
     can_delete = True
 
 
-# @admin.register(GeneralInfo)
-# class GeneralInfoAdmin(admin.ModelAdmin):
-#     actions = None
-#     fieldsets = [
-#         (u'Общая информация', {
-#             'fields': ('brandname',),
-#             'classes': ('wide',)
-#         }),
-#         (u'для SEO', {
-#             'fields': ('title', 'meta_keywords', 'meta_desc'),
-#             'classes': ('collapse', 'wide')
-#         })
-#     ]
+@admin.register(GeneralInfo)
+class GeneralInfoAdmin(admin.ModelAdmin):
+    actions = None
+    fieldsets = [
+        (u'Общая информация', {
+            'fields': ('brandname', 'header', 'phone'),
+            'classes': ('wide',)
+        }),
+        # (u'для SEO', {
+        #     'fields': ('title', 'meta_keywords', 'meta_desc'),
+        #     'classes': ('collapse', 'wide')
+        # })
+    ]
 
 
 @admin.register(Goods)
