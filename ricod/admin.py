@@ -47,4 +47,4 @@ class GoodsAdmin(admin.ModelAdmin):
 @admin.register(Attributes)
 class AttributesAdmin(admin.ModelAdmin):
     search_fields = ('name', 'value', 'goods__name')
-    list_display = ('__str__', 'goods')
+    list_display = ('display', 'goods')

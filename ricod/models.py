@@ -30,7 +30,7 @@ class Catalog(models.Model):
         verbose_name_plural = u'каталог'
         verbose_name = u'каталог'
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 
@@ -47,7 +47,7 @@ class Goods(models.Model):
         verbose_name_plural = u'товары'
         unique_together = ('name', 'catalog')
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
 
@@ -62,8 +62,12 @@ class Attributes(models.Model):
         verbose_name_plural = u'аттрибуты'
         unique_together = ('name', 'goods')
 
-    def __str__(self):
+    @property
+    def display(self):
         return u'%s:%s' % (self.name, self.value)
+
+    def __unicode__(self):
+        return self.display
 
 
 class Photos(models.Model):
