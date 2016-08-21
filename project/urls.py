@@ -17,7 +17,7 @@ from django.contrib import admin
 from ricod import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^ricodadmin/', include(admin.site.urls)),
 
     url(r'^$', views.home, name='home'),
     url(r'^catalog/', views.catalog, name='catalog'),
