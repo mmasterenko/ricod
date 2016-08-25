@@ -19,7 +19,8 @@
     <link  href="{% static 'css/nivo-slider.css' %}"  rel="stylesheet"  type="text/css"  media="screen" />
 
     <script type="text/javascript" src="{% static 'js/chainedselects.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+{#    <script type="text/javascript" src="{% static 'js/jquery-1.7.1.min.js' %}"></script>#}
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
 {#    <script type="text/javascript" src="{% static 'js/fancybox/jquery.fancybox-1.3.4.pack.js' %}"></script>#}
     <script type="text/javascript" src="{% static 'js/fancybox/jquery.mousewheel-3.0.4.pack.js' %}"></script>
@@ -48,7 +49,7 @@
 
         <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 
                 <span class="sr-only">Переключить навигацию</span>
 
@@ -105,7 +106,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-{#                <p class="copyright text-muted small"><a href="http://biggo.pro">Создание сайта — сервис «Бигго.Про»</a></p>#}
                 <p class="copyright text-muted small"><span class="vmode_editable_text"><span>Рикод</span></span> <span style="color: #d32e2e; font-size: 25px; font-style: italic; font-family: Tahoma; " class="vmode_editable_text"><span>{{ phone }}</span></span></p>
             </div>
         </div>
@@ -114,7 +114,7 @@
 </footer>
 
 <!-- Bootstrap Core JavaScript -->
-<!--<script src="user_js/bootstrap.min.js"></script>-->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 
 </body>
 </html>
